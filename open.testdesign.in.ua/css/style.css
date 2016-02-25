@@ -1,0 +1,113 @@
+@font-face {
+    font-family: "Heinric";
+    src: url("../fonts/heinrichscript.ttf");
+    font-style: normal;
+    font-weight: normal;
+}
+html,
+body {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+body {
+	background-color: #fff;
+	overflow: hidden;
+}
+* {
+	font-family: "Heinric";
+}
+.wrapper {
+	text-align: center;
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+.img-fon {
+	position: absolute;
+	left: -5%;
+	top: -5%;
+	width: 110%;
+	height: 110%;
+	background: url("../images/fon.jpg")no-repeat;
+	background-position: top center;
+	background-size: cover;
+	opacity: .2!important;
+	z-index: -1;
+}
+.logo {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;
+}
+p {
+	font-size: 25px;
+	color: #414042;
+}
+.logo-text {
+	position: absolute;
+	left: calc((100% - 255px)/2);
+	top: calc((100% - 328px)/2);
+	z-index: -1;
+}
+.logo-rotate {  
+  -webkit-animation: spin 8s linear 0s infinite reverse;
+  -moz-animation: spin 8s linear 0s infinite reverse;  
+  -ms-animation: spin 8s linear 0s infinite reverse;
+  -o-animation: spin 8s linear 0s infinite reverse;
+  animation: spin 8s linear 0s infinite reverse;  
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -ms-animation-play-state: paused;
+  -o-animation-play-state: paused;  
+  animation-play-state: paused;
+}
+
+.logo-rotate:hover {
+  -webkit-animation-play-state: running;
+  -moz-animation-play-state: running;
+  -ms-animation-play-state: running;
+  -o-animation-play-state: running;
+  animation-play-state: running;
+}
+@keyframes spin {
+  0% { transform: rotate(360deg); }
+  100% { transform: rotate(0deg); }
+}
+@-webkit-keyframes spin {
+  0% {-webkit-transform: rotate(360deg); }
+  100% { -webkit-transform: rotate(0deg); }
+}
+@-ms-keyframes spin {
+  0% {-ms-transform: rotate(360deg); }
+  100% { -ms-transform: rotate(0deg); }
+}
+@-moz-keyframes spin {
+  0% { -moz-transform: rotate(360deg); }
+  100% { -moz-transform: rotate(0deg); }
+}
+@-o-keyframes spin {
+  0% { -o-transform: rotate(360deg); }
+  100% { -o-transform: rotate(0deg); }
+}
+@media only screen and (max-width:1366px) {
+	p {
+		font-size: 18px;
+	}
+	.logo-text {
+	    top: calc((100% - 282px)/2);
+	}
+}
+@media only screen and (max-width:1280px) {
+	.logo-text {
+	    position: absolute;
+	    left: calc((100% - 101px)/2);
+	    top: calc((100% - 190px)/2);
+	    width: 103px;
+	}
+	.logo-rotate {
+		width: 220px;
+	}
+}
